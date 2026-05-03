@@ -81,7 +81,7 @@ Format your response as JSON:
 }`;
 
     const message = await client.messages.create({
-      model: "claude-haiku-4-5-20251001",
+      model: "claude-sonnet-4-6",
       max_tokens: 1024,
       messages: [
         {
@@ -137,7 +137,7 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
 Be concise and focus on actionable insights.`;
 
     const message = await client.messages.create({
-      model: "claude-haiku-4-5-20251001",
+      model: "claude-sonnet-4-6",
       max_tokens: 512,
       messages: [
         {
@@ -223,7 +223,7 @@ app.post("/api/news", async (req, res) => {
     const systemPrompt = `Based on this AI/pavement engineering news, suggest 3 different content angles for social media and newsletter. Keep each suggestion concise (1-2 sentences).`;
 
     const message = await client.messages.create({
-      model: "claude-haiku-4-5-20251001",
+      model: "claude-sonnet-4-6",
       max_tokens: 512,
       messages: [
         {
